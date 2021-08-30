@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react";
 import './MessageListItem.css';
 
 const MessageListItem = (props) => {
+let you = "You";
 
 const [username , setUsername] = useState();
-
 
 useEffect(() =>{
     axios.get('http://localhost:8080/user/id/' + props.userId).then(response => {
@@ -20,10 +20,11 @@ useEffect(() =>{
 } , [props.userId]);
 
     return(
-        <div className="message-list-item">
-            <p className="message-list-item_small">{username}</p>
-            <p style={{fontWeight :'bold'}}>{props.message}</p>
-            <p className="message-list-item_small">{props.time}</p>
+        
+        <div className={props.currentUsername === username ? "message-list-item_right" : "message-list-item"}>
+            <p className="paragraph paragraph_small">{props.currentUsername === username ? you : username}</p>
+            <p className= "paragraph" style={{fontWeight :'bold'}}>{props.message}</p>
+            <p className="paragraph paragraph_small">{props.time}</p>
         </div>
     );
 

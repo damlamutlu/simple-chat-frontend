@@ -1,4 +1,9 @@
-.meesage{
-    width: 100px;
-    height: 100px;
+.message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #dbdbdb;
+    border-radius: 5px;
+    height: 700px;
+    margin-top: 10px;
 }

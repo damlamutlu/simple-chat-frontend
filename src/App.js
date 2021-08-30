@@ -15,7 +15,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className="App">
       <Route exact path = "/message">
         <Message user = {user} />
       </Route>

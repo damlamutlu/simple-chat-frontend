@@ -41,14 +41,13 @@ const Landing = (props) => {
   return (
     <div className="landing-page">
       <div>
-        <input type="text" placeholder="username" onChange={inputHandler} />
+        <input className = "landing-page_input" type="text" placeholder="username" onChange={inputHandler} />
       </div>
       <div>
         <button className="button" onClick={clickedHandler}>
           <span
-            className="fa fa-arrow-circle-right"
-            style={{ color: "blue" }}
-          ></span>
+            className="fa fa-arrow-circle-right fa-2x"
+            ></span>
         </button>
       </div>
     </div>

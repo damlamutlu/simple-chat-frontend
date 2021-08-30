@@ -2,14 +2,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
-    width: 50%;
-    border: 2px solid red;
-    box-shadow: 1px 1px 1px #ccc;
+    border: 2px solid #dbdbdb;
+    border-radius: 5px;
+    height:400px;
+    width: 500px;
+    margin-top: 60px;
 
 }
 
 .button{
     border:none;
     background-color: white;
+    color: #2e699b;
+}
+
+.landing-page_input{
+
+    width: 300px;
+    height: 40px;
+    border: 2px solid;
+    border-radius: 100px;
+    border-color: #2e699b;
 }

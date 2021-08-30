@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MessageInput from "./MessageInput";
 import MessageList from "./MessageList";
+import './Message.css';
 
 const Message = (props) => {
   const [messages, setMessages] = useState();
@@ -21,9 +22,9 @@ const Message = (props) => {
     setMessages(messages);
   };
 
-  return (
+return (
     <div className='message'>
-      <MessageList messages={messages} />
+      <MessageList messages={messages} user={props.user} />
       <MessageInput user={props.user} passMessages={getMessages} />
     </div>
   );

@@ -53,5 +53,5 @@ const Landing = (props) => {
       </div>
     </div>
   );
-};
+}
 export default Landing;

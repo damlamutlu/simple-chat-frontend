@@ -1,11 +1,10 @@
 import React from 'react';
+import MessageInput from './MessageInput';
 
 const Message = (props) => {
     return (
         <div>
-            <h2>
-               Welcome {props.username} at Message page !
-            </h2>
+            <MessageInput user = {props.user}/>
         </div>
     );
 

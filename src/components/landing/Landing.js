@@ -18,14 +18,14 @@ const Landing = (props) => {
               username: username,
             })
             .then((response) => {
-              props.onPassUsername(response.data.username);
+              props.onPassUsername(response.data);
               history.push("/message");
             })
             .catch((error) => {
               console.log(error);
             });
         } else {
-          props.onPassUsername(response.data.username);
+          props.onPassUsername(response.data);
           history.push("/message");
         }
       })

@@ -1,23 +1,23 @@
 
 import './App.css';
 import React , { useState } from 'react';
-import { Route , withRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Landing from './components/landing/Landing';
 import Message from './components/message/Message';
 
 function App() {
 
-  const[username , setUsername] = useState('');
+  const[user , setUsername] = useState();
 
-  const getUsernameHandler = ( username) => {
-    setUsername(username);
+  const getUsernameHandler = ( user) => {
+    setUsername(user);
 
   }
   
   return (
     <div>
       <Route exact path = "/message">
-        <Message username = {username} />
+        <Message user = {user} />
       </Route>
       <Route exact path = "/">
         <Landing onPassUsername = {getUsernameHandler} /> 
@@ -27,4 +27,4 @@ function App() {
   );
 }
 
-export default withRouter(App) ;
+export default App ;

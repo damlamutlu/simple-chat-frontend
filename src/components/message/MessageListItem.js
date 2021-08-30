@@ -24,7 +24,7 @@ useEffect(() =>{
         <div className={props.currentUsername === username ? "message-list-item_right" : "message-list-item"}>
             <p className="paragraph paragraph_small">{props.currentUsername === username ? you : username}</p>
             <p className= "paragraph" style={{fontWeight :'bold'}}>{props.message}</p>
-            <p className="paragraph paragraph_small">{props.time}</p>
+            <p className="paragraph paragraph_small">{props.time.toLocaleString()}</p>
         </div>
     );
 

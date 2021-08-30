@@ -9,7 +9,10 @@ const Landing = (props) => {
   const history = useHistory();
 
   const clickedHandler = () => {
-    axios
+    if(username === ""){
+        alert("Username cannot be empty!");
+    }else{
+        axios
       .get("http://localhost:8080/user/username/" + username)
       .then((response) => {
         if (response.data === "") {
@@ -19,6 +22,7 @@ const Landing = (props) => {
             })
             .then((response) => {
               props.onPassUsername(response.data);
+              localStorage.setItem('user' , JSON.stringify(response.data));
               history.push("/message");
             })
             .catch((error) => {
@@ -26,12 +30,14 @@ const Landing = (props) => {
             });
         } else {
           props.onPassUsername(response.data);
+          localStorage.setItem('user' , JSON.stringify(response.data));
           history.push("/message");
         }
       })
       .catch((error) => {
         console.log(error);
       });
+    }    
   };
 
   const inputHandler = (event) => {

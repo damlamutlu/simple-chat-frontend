@@ -6,8 +6,14 @@ import './Message.css';
 
 const Message = (props) => {
   const [messages, setMessages] = useState();
+  const [user , setUser] = useState();
 
   useEffect(() => {
+    if(props.user === undefined){
+        setUser(JSON.parse(localStorage.getItem("user")));
+    }else{
+        setUser(props.user);
+    }
     axios
       .get("http://localhost:8080/messages")
       .then((response) => {
@@ -24,8 +30,8 @@ const Message = (props) => {
 
 return (
     <div className='message'>
-      <MessageList messages={messages} user={props.user} />
-      <MessageInput user={props.user} passMessages={getMessages} />
+      <MessageList messages={messages} user={user} />
+      <MessageInput user={user} passMessages={getMessages} />
     </div>
   );
 };

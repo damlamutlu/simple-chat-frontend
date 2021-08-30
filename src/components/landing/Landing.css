@@ -24,3 +24,22 @@
     border-radius: 100px;
     border-color: #2e699b;
 }
+
+
+@media  (max-width: 600px ) {
+    .landing-page {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        margin :20px;
+    }
+
+    .landing-page_input{
+        width: 100%;
+        margin: 20px;
+  }
+  .button {
+    width: 10%;
+    
+  }
+}

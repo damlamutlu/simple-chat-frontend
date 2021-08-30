@@ -6,3 +6,10 @@
     border: 1px solid #2e699b;
     text-align: center;
 }
+
+@media  (max-width: 600px ) {
+    .message-input_input {
+        width: 80%;
+        height: 50%;
+    }
+  }

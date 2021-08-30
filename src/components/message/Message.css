@@ -7,3 +7,10 @@
     height: 700px;
     margin-top: 10px;
 }
+
+@media  (max-width: 600px) {
+    .message {
+      width: 100% ;
+      justify-content: center;
+    }
+  }

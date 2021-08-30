@@ -7,3 +7,11 @@
     overflow-y:scroll
 
 }
+
+
+@media  (max-width: 600px ) {
+    .message-list {
+        width: 100%;
+        margin-left: 100px;
+    }
+  }
